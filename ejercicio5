@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    float h[5];
+    for(int i = 0; i < 5; i++){
+        cout << "Altura " << i << ": ";
+        cin >> h[i];
+    }
+
+    float suma = 0;
+    for(int i = 0; i < 5; i++){
+        suma = suma + h[i];
+    }
+
+    float prom = suma / 5;
+
+    int altas = 0, bajas = 0;
+
+    for(int i = 0; i < 5; i++){
+        if(h[i] > prom){
+            altas++;
+        } else {
+            bajas++;
+        }
+    }
+
+    cout << "Promedio: " << prom << endl;
+    cout << "Altas: " << altas << endl;
+    cout << "Bajas: " << bajas;
+
+    return 0;
+}
