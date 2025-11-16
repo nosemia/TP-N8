@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int n;
+    cout << "Cantidad: ";
+    cin >> n;
+
+    int v[50]; 
+
+    for(int i = 0; i < n; i++){
+        cout << "Valor " << i << ": ";
+        cin >> v[i];
+    }
+
+    int valor, pos;
+    cout << "Valor a insertar: ";
+    cin >> valor;
+    cout << "Posicion: ";
+    cin >> pos;
+
+    for(int i = n; i > pos; i--){
+        v[i] = v[i-1];
+    }
+
+    v[pos] = valor;
+
+    n = n + 1;
+
+    cout << "Vector final:\n";
+    for(int i = 0; i < n; i++){
+        cout << v[i] << " ";
+    }
+
+    return 0;
+}
